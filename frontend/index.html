@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>URL Shortener</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <main class="card" role="main">
+    <h1>Короткие ссылки (фронтенд)</h1>
+    <p class="lead">Вставьте длинную ссылку, нажмите <strong>Сократить</strong> — получите короткую ссылку, по которой можно перейти.</p>
+
+    <div>
+      <div class="form-row">
+        <input id="urlInput" type="url" placeholder="Вставьте свою ссылку..." aria-label="Long URL" />
+        <button id="shortenBtn" class="primary">Сократить</button>
+      </div>
+
+      <div id="resultArea" class="result" aria-live="polite" hidden>
+        <div class="short-card">
+          <span class="muted">Короткая ссылка:</span>
+          <a id="shortLink" href="#" target="_blank" rel="noopener">—</a>
+        </div>
+
+        <div class="actions">
+          <button id="copyBtn" class="btn-ghost">Копировать</button>
+        </div>
+      </div>
+
+      <div id="error" class="error" role="alert" hidden></div>
+
+      
+    </div>
+  </main>
+  <script src="static/script.js"></script>
+</body>
+</html>
